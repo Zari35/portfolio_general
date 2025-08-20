@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+  <link rel="stylesheet" href="styles.css" /> <!-- Link to your CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Remove if using your own CSS -->
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-gray-900 text-white px-6 py-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-xl font-bold">My Portfolio</a>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="#featured" class="hover:underline">Featured</a>
+        <a href="#others" class="hover:underline">Other Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-12">
+
+    <h1 class="text-4xl font-bold text-center mb-12">My Projects</h1>
+
+    <!-- Featured Projects -->
+    <section id="featured" class="mb-20">
+      <h2 class="text-3xl font-semibold mb-8">Featured Projects</h2>
+     
+     <!-- PROFITABILITY DASHBOARD -->
+        <div class="flex flex-col gap-6 mb-24">
+
+        <!-- TOP SECTION: IMAGE + TITLE + SUMMARY SIDE-BY-SIDE -->
+        <div class="flex flex-col md:flex-row items-start gap-8">
+
+            <!-- IMAGE LEFT -->
+            <div class="w-full md:w-1/2">
+            <div class="relative overflow-hidden rounded-lg shadow-md">
+                <div id="carousel-1" class="flex transition-transform duration-500 ease-in-out">
+                <img src="./assets/dashboards/profitability_1.png" alt="Profitability Dashboard 1" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/profitability_2.png" alt="Profitability Dashboard 2" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/profitability_2-1.png" alt="Profitability Dashboard 3" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                </div>
+                <button id="prevBtn-1" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow border hover:bg-gray-100">
+                &lt;
+                </button>
+                <button id="nextBtn-1" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow border hover:bg-gray-100">
+                &gt;
+                </button>
+            </div>
+            </div>
+
+            <!-- TITLE + SUMMARY TEXT RIGHT -->
+            <div class="w-full md:w-1/2 space-y-4">
+            <h3 class="text-2xl font-bold text-gray-800">Profitability Decomposition Dashboard</h3>
+            <h4 class="text-gray-600">Superset + SQL + Jinja</h4><br>
+
+            <div>
+                <p class="font-semibold text-gray-800">🧩 Business Case Summary</p>
+                <p class="text-gray-700">
+                The client needed a clearer view of how the profitability % was built from underlying components. Existing tools lacked the flexibility to surface this level of detail.
+                </p>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM SECTION: REST OF THE TEXT, FULL WIDTH -->
+        <div class="space-y-6 mt-6">
+
+            <div>
+            <p class="font-semibold text-gray-800">📊 What I built</p>
+            <p class="text-gray-700">
+                A custom decomposition view in Superset, using a nested logic structure (inspired by Matryoshka dolls), showing how each element impacts the final KPI. I added expand/collapse toggles for calculations and enhanced readability through color-coded plan/fact comparisons, deltas, and previous period context.
+            </p>
+            </div>
+
+            <div>
+            <p class="font-semibold text-gray-800">💡 Business Value</p>
+            <p class="text-gray-700">
+                Delivered full transparency into margin composition with a user-friendly interface. Went beyond scope by integrating performance metrics and intuitive visuals. The client highlighted it as a key tool for improving operational insight and decisions.
+            </p>
+            </div>
+
+            <ul class="text-sm text-gray-600 list-disc list-inside">
+            <li>Root cause analysis for margin shifts</li>
+            <li>Interactive plan vs fact views with visual deltas</li>
+            <li>Expandable logic tree (“Show calculation”, “Expand table”)</li>
+            <li>Tech stack: ClickHouse SQL, Handlebars, Jinja in Superset</li>
+            </ul>
+
+            <p class="text-sm text-gray-500 italic">
+            Confidential values (Fact and Plan) hidden — only relative deltas are shown for structure and logic
+            </p>
+
+        </div>
+        </div>
+
+        <!-- FEATURED PROJECT – Campaign Performance Dashboard -->
+        <div class="flex flex-col gap-6 mb-24">
+
+        <!-- TOP: IMAGE LEFT + SUMMARY RIGHT -->
+        <div class="flex flex-col md:flex-row items-start gap-8">
+
+            <!-- IMAGE SLIDER LEFT -->
+            <div class="w-full md:w-1/2">
+            <div class="relative w-full overflow-hidden rounded-lg shadow-md">
+                <div id="carousel-2" class="flex transition-transform duration-500 ease-in-out">
+                <img src="./assets/dashboards/marketing 1.png" alt="View 1" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/marketing 2.png" alt="View 2" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/marketing 3.png" alt="View 3" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                </div>
+                <button id="prevBtn-2" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow border hover:bg-gray-100">&lt;</button>
+                <button id="nextBtn-2" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow border hover:bg-gray-100">&gt;</button>
+            </div>
+            </div>
+
+            <!-- TITLE + BUSINESS CASE RIGHT -->
+            <div class="w-full md:w-1/2 space-y-4">
+            <h3 class="text-2xl font-bold text-gray-800">Campaign Performance Dashboard</h3>
+            <h4 class="text-gray-600">Superset + SQL + Jinja</h4>
+
+            <div>
+                <p class="font-semibold text-gray-800">🧩 Business Case Summary</p>
+                <p class="text-gray-700">
+                The Marketing team needed a dashboard to track performance of outbound campaigns (push, email, SMS). Their initial request was a single exportable table, but I saw an opportunity to improve visibility and provide real insight.
+                </p>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM: DETAILS FULL WIDTH -->
+        <div class="space-y-6 mt-6">
+
+            <div>
+            <p class="font-semibold text-gray-800">📊 What I built</p>
+            <p class="text-gray-700">
+                I defined the scope with the stakeholders, clarified the KPIs, and delivered a dashboard showing full funnel metrics (sent, delivered, opened, clicked) for each channel. In addition to export-ready tables, I added custom KPI cards to give the team an immediate view of campaign status.
+            </p>
+            </div>
+
+            <div>
+            <p class="font-semibold text-gray-800">💡 Business Value</p>
+            <p class="text-gray-700">
+                I turned a static table into a dynamic dashboard that supports real-time monitoring and quick action. The tool helped the marketing team identify bottlenecks across campaigns and was adopted widely after delivery.
+            </p>
+            </div>
+
+            <ul class="text-sm text-gray-600 list-disc list-inside">
+            <li>Unified visibility across push, email, and SMS campaigns</li>
+            <li>KPI cards with delivery and engagement funnel</li>
+            <li>Exportable detailed views with filters</li>
+            <li>Tech stack: ClickHouse SQL, Jinja templating, Superset</li>
+            </ul>
+
+            <p class="text-sm text-gray-500 italic">Confidential campaign data hidden — screenshots show structure only.</p>
+
+        </div>
+        </div>
+
+    <!-- Featured Project – Superset Store Write-Offs Dashboard -->
+        <div class="flex flex-col gap-6 mb-24">
+
+        <!-- TOP: IMAGE LEFT + SUMMARY RIGHT -->
+        <div class="flex flex-col md:flex-row items-start gap-8">
+
+            <!-- IMAGE SLIDER LEFT -->
+            <div class="w-full md:w-1/2">
+            <div class="relative w-full overflow-hidden rounded-lg shadow-md">
+                <div id="carousel-3" class="flex transition-transform duration-500 ease-in-out">
+                <img src="./assets/dashboards/analysis_sp_1.png" alt="View 1" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/analysis_sp_1-1.png" alt="View 1" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/analysis_sp_1-2.png" alt="View 1" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/analysis_sp_2.png" alt="View 2" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/analysis_sp_3.png" alt="View 2" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/analysis_sp_4.png" alt="View 2" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/analysis_sp_5.png" alt="View 2" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                <img src="./assets/dashboards/analysis_sp_6.png" alt="View 2" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                </div>
+                <button id="prevBtn-3" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow border hover:bg-gray-100">&lt;</button>
+                <button id="nextBtn-3" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow border hover:bg-gray-100">&gt;</button>
+            </div>
+            </div>
+
+            <!-- TITLE + BUSINESS CASE RIGHT -->
+            <div class="w-full md:w-1/2 space-y-4">
+            <h3 class="text-2xl font-bold text-gray-800">Store Write-Offs Dashboard</h3>
+            <h4 class="text-gray-600">Superset + SQL + ETL</h4>
+
+            <div>
+                <p class="font-semibold text-gray-800">🧩 Business Case Summary</p>
+                <p class="text-gray-700">
+                    Our goal was to provide store managers and finance teams with a complete overview of write-off activity across locations. Previously, they had to use a slow internal program and manually filter through data to understand the reason and amount behind each write-off.
+                </p>
+            </div>
+
+            </div>
+
+        </div>
+
+        <!-- BOTTOM: DETAILS FULL WIDTH -->
+        <div class="space-y-6 mt-6">
+            <div>
+            <p class="font-semibold text-gray-800">📊 What I built</p>
+            <p class="text-gray-700">
+                 I managed the full project lifecycle: built a custom ETL pipeline, cleaned and transformed raw data, gathered business requirements, and designed a Superset dashboard with dynamic KPIs. I introduced a one-click breakdown to show detailed write-off reasons directly from the KPI blocks. I also added a final tab that visualizes the impact of each write-off type across different store formats.
+            </p>
+            </div>
+
+            <div>
+            <p class="font-semibold text-gray-800">💡 Business Value</p>
+            <p class="text-gray-700">
+                The dashboard replaced a fragmented process with a clear, real-time solution. Teams now instantly identify issues, explore data without re-filtering, and make decisions faster. The final product was well received and is now used daily across departments.
+            </p>
+            </div>
+
+            <ul class="mt-4 text-sm text-gray-600 list-disc list-inside">
+                    <li>Complete solution: ETL, data modeling, KPI design, dashboard build</li>
+                    <li>Interactive KPIs with instant drill-down by write-off reason</li>
+                    <li>Final tab shows cross-store impact for strategic decisions</li>
+                    <li>Fast, user-friendly, and optimized for frequent use</li>
+            </ul>
+
+            <p class="mt-4 text-sm text-gray-500 italic">Confidential values hidden — screenshots show dashboard structure only.</p>
+
+        </div>
+        </div>
+
+<!-- Featured Project – Superset Commerce Dashboard -->
+<div class="flex flex-col gap-6 mb-24">
+
+    <!-- TOP: IMAGE LEFT + SUMMARY RIGHT -->
+    <div class="flex flex-col md:flex-row items-start gap-8">
+
+        <!-- IMAGE SLIDER LEFT -->
+        <div class="w-full md:w-1/2">
+            <div class="relative w-full overflow-hidden rounded-lg shadow-md">
+                <div id="carousel-4" class="flex transition-transform duration-500 ease-in-out">
+                    <img src="./assets/dashboards/commerce_1.png" alt="Revenue tab" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                    <img src="./assets/dashboards/commerce_2.png" alt="Overview tab" class="w-full shrink-0 cursor-zoom-in" data-zoom />
+                </div>
+                <button id="prevBtn-4" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow border hover:bg-gray-100">&lt;</button>
+                <button id="nextBtn-4" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow border hover:bg-gray-100">&gt;</button>
+            </div>
+        </div>
+
+        <!-- TITLE + BUSINESS CASE RIGHT -->
+        <div class="w-full md:w-1/2 space-y-4">
+            <h3 class="text-2xl font-bold text-gray-800">Commerce Performance Dashboard</h3>
+            <h4 class="text-gray-600">Superset + SQL + KPI Design</h4>
+
+            <div>
+                <p class="font-semibold text-gray-800">🧩 Business Case Summary</p>
+                <p class="text-gray-700">
+                    Commercial data was spread across multiple reports, making it difficult for managers to see the full picture. 
+                    My goal was to bring revenue, costs, margin, inventory, and losses into one interactive solution, 
+                    with consistent plan vs fact tracking, year-over-year comparison, and execution metrics. 
+                    The result is a clear and reliable view of performance that supports faster and more confident decisions.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM: DETAILS FULL WIDTH -->
+    <div class="space-y-6 mt-6">
+        <div>
+            <p class="font-semibold text-gray-800">📊 What I built</p>
+            <p class="text-gray-700">
+                I developed a multi-tab Superset dashboard covering Revenue, Purchasing Costs, Trade Margin, Markup, 
+                Inventory Turnover, Losses, Write-offs, and Bonuses. Each tab follows the same structure, with 
+                KPI cards showing current results, YoY difference, plan variance, and execution %.  
+                The Revenue module (shown in screenshots) also includes trend charts for plan execution and a drill-down 
+                table by format, region, store, supplier, and SKU hierarchy. I paid special attention to design, ensuring 
+                clean visuals, consistent color logic, and user-friendly layouts.
+            </p>
+        </div>
+
+        <div>
+            <p class="font-semibold text-gray-800">💡 Business Value</p>
+            <p class="text-gray-700">
+                The dashboard replaced fragmented Excel reporting with a single, real-time source of truth. 
+                Managers now quickly see deviations, explore performance across any dimension, and identify 
+                root causes in just a few clicks. Strong visual design made adoption easy and turned the dashboard 
+                into a daily decision-making tool across departments.
+            </p>
+        </div>
+
+        <ul class="mt-4 text-sm text-gray-600 list-disc list-inside">
+            <li>End-to-end solution including SQL modeling, KPI logic, and Superset build</li>
+            <li>Consistent KPI cards with plan vs fact, year-over-year, and execution metrics</li>
+            <li>Interactive trend analysis with drill-down to region, store, supplier, and SKU</li>
+            <li>Professional design focused on clarity, usability, and adoption</li>
+        </ul>
+
+        <p class="mt-4 text-sm text-gray-500 italic">Confidential values hidden. Screenshots show dashboard structure only.</p>
+    </div>
+</div>
+
+
+    </section>
+
+    <!-- Other Projects -->
+    <section id="others">
+      <h2 class="text-3xl font-semibold mb-8">Other Projects</h2>
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        
+        <!-- Power BI Dashboard Card -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+            <img src="./assets/undraw_websites.svg" alt="Sales Funnel Dashboard" class="h-32 mx-auto mb-4">
+            <h3 class="text-xl font-semibold mb-1 text-center">PowerBI – Sales Funnel Analysis (Q2 2025)</h3>
+            <p class="text-sm text-gray-600 text-center mb-4">
+                Designed an interactive Power BI dashboard to monitor total visits, leads, deals, and revenue performance by region and channel.
+                <br>
+                <a href="./assets/SalesFunnelDashboard_Q2_2025.pdf" target="_blank" class="text-blue-600 underline">View PDF Output</a>
+            </p>
+            <div class="text-center space-x-4 text-sm">
+                <!--<a href="https://github.com/Zari35/ProjectsPowerBI/blob/main/SalesFunnelDashboard_Q2_2025.pbix" target="_blank" class="text-blue-600 hover:underline">GitHub</a>-->
+                <a href="./assets/sales_funnel_data.csv" target="_blank" class="text-gray-700 hover:underline">Dataset</a>
+            </div>
+        </div>
+
+        <!-- SQL COVID Data Exploration Project -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="./assets/undraw_powerBI.svg" alt="COVID SQL Project" class="h-32 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-1 text-center">Tableau – Airbnb Dataset</h3>
+        <p class="text-sm text-gray-600 text-center mb-4">
+            Built insightful dashboards using Tableau and the Airbnb 2016 dataset. Focused on clarity, interactivity, and applying best practices for visual storytelling.
+            <br>
+            <a href="https://public.tableau.com/app/profile/sonya8456/viz/AirBnBFullProject_16770947115610/Dashboard1" target="_blank" class="text-blue-600 underline">View the live dashboard</a>
+        </p>
+        <div class="text-center text-sm space-x-4">
+            <a href="https://github.com/Zari35/ProjectsTableau" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+            <a href="https://www.kaggle.com/alexanderfreberg/airbnb-listings-2016-dataset" target="_blank" class="text-gray-700 hover:underline">Dataset</a>
+        </div>
+        </div>
+
+        <!-- Power BI Dashboard Card -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="./assets/undraw_tableau.svg" alt="Power BI Dashboard" class="h-32 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-1 text-center">PowerBI – Survey Analysis</h3>
+        <p class="text-sm text-gray-600 text-center mb-4">
+            Created a professional Power BI dashboard using survey data, focusing on visualization clarity and insight discovery.
+            <br>
+            <a href="./assets/PowerBI_Project.pdf" target="_blank" class="text-blue-600 underline">View PDF Output</a>
+        </p>
+        <div class="text-center space-x-4 text-sm">
+            <a href="https://github.com/Zari35/ProjectsPowerBI/blob/main/Data%20Professional%20Survey%20Breakdown%20-%20project.pbix" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+            <a href="./assets/Dataset Power BI Project.xlsx" target="_blank" class="text-gray-700 hover:underline">Dataset</a>
+        </div>
+        </div>
+
+        <!-- Excel Project Card -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="./assets/undraw_excel.svg" alt="Excel project icon" class="h-32 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-1 text-center">Data Cleaning </h3>
+        <p class="text-sm text-gray-600 text-center mb-4">Excel-based sales dashboard with cleaned data and insights.</p>
+        <div class="text-center space-x-4">
+            <a href="https://github.com/Zari35/ProjectsExcel" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+            <a href="./assets/Dataset Excel Project.xlsx" target="_blank" class="text-gray-700 hover:underline">Dataset</a>
+        </div>
+        </div>
+
+        <!-- Python Crypto API Project -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="./assets/undraw_python.svg" alt="Crypto API" class="h-32 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-1 text-center">Crypto API Automation</h3>
+        <p class="text-sm text-gray-600 text-center mb-4">
+            Used Python to pull real-time cryptocurrency data from a public API for analysis and decision-making.
+        </p>
+        <div class="text-center text-sm">
+            <a href="https://github.com/Zari35/ProjectsPython" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+        </div>
+        </div>
+
+        <!-- SQL COVID Data Exploration Project -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="./assets/data_exploration.svg" alt="COVID SQL Project" class="h-32 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-1 text-center">Data Exploration – COVID-19</h3>
+        <p class="text-sm text-gray-600 text-center mb-4">
+            Used SQL to explore COVID-19 death and vaccination data, uncovering trends and patterns using advanced queries.
+            <br>
+            <a href="https://github.com/Zari35/ProjectsSQL/releases/tag/v1" target="_blank" class="text-blue-600 underline">Download Excel Files</a>
+        </p>
+        <div class="text-center text-sm space-x-4">
+            <a href="https://github.com/Zari35/ProjectsSQL/blob/main/COVID%20project%20portfolio%20-%20Data%20Exploration.sql" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+            <a href="https://ourworldindata.org/covid-deaths" target="_blank" class="text-gray-700 hover:underline">Dataset</a>
+        </div>
+        </div>
+
+        <!-- SQL Nashville Housing Data Cleaning Project -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+        <img src="./assets/data_cleaning.svg" alt="Nashville SQL Cleaning" class="h-32 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-1 text-center">Data Cleaning – Housing Data</h3>
+        <p class="text-sm text-gray-600 text-center mb-4">
+            Cleaned the Nashville Housing dataset using SQL by fixing inconsistencies, standardizing data, and preparing it for deeper analysis.
+        </p>
+        <div class="text-center text-sm space-x-4">
+            <a href="https://github.com/Zari35/ProjectsSQL/blob/main/Nashville%20Housing%20project%20portfolio%20-%20Data%20Cleaning.sql" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+            <a href="./assets/Dataset Nashville Housing Data for Data Cleaning.xlsx" target="_blank" class="text-gray-700 hover:underline">Dataset</a>
+        </div>
+        </div>
+
+            
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-20">
+    <p>&copy; 2025 Sonya Helal. All rights reserved.</p>
+  </footer>
+    
+    <script src="script.js"></script>
+
+    <!-- Lightbox for zoom-in -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-2xl font-bold">&times;</button>
+    <img id="lightbox-img" class="max-w-[90%] max-h-[90%] object-contain rounded-lg shadow-lg" />
+    </div>
+
+
+</body>
+</html>
